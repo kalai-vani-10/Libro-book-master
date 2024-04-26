@@ -1,0 +1,54 @@
+{% load static %}
+<html>
+    <head>
+        
+            <style>
+                .container {
+            margin: 0 auto;
+            width: 50%; /* Adjust the width as needed */
+        }
+            
+
+
+        table {
+            
+            width: 80%;
+            height:60%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid brown;
+            
+        }
+       
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        
+        tr{
+            background-color:white;
+        }
+        tr:hover {
+            background-color:rgb(206, 195, 195) ;
+            
+        }
+      </style>
+    </head>
+    
+<
+<body>
+   
+<div class="container">
+    <h1 style="color: black; text-align: center;">The Available Books </h1>
+<table border="2" style="align-items: center;">
+    <tr><td>Book id</td><td>Book name</td><td>Author name</td></tr>
+    {% for x in booklist %}
+    <tr><td>{{x.bookID}}</td><td>{{x.bookname}}</td><td>{{x.authorname}}</td></tr>
+    {% endfor %}
+</table>
+<a style="color:black"href="/">Back</a>
+
+</div>
+</body>
+</html>

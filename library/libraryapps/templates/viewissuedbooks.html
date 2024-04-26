@@ -1,0 +1,71 @@
+
+
+{% load static %}
+<html>
+    <head>
+        
+        <style>
+            .container {
+        margin: 0 auto;
+        width: 50%; /* Adjust the width as needed */
+    }
+        
+
+
+    table {
+        
+        width: 80%;
+        height:60%;
+        border-collapse: collapse;
+    }
+    table, th, td {
+        border: 1px solid brown;
+        
+    }
+   
+    th, td {
+        padding: 8px;
+        text-align: left;
+    }
+    
+    tr{
+        background-color:white;
+    }
+    tr:hover {
+        background-color:rgb(206, 195, 195) ;
+        
+    }
+  </style>
+    </head>
+    <
+
+<body>
+   
+<div class="container">
+    <h1 style="color:black">Issuedbooks </h1>
+    <table border="2">
+        <tr>
+            <td>Book id</td>
+            <td>User name</td>
+            <td>Email Id</td>
+            <td>IssuedDate</td>
+            <td>Return Date</td>
+            
+        </tr>
+        {% for x in issuedlist %}
+        <tr>
+            <td>{{ x.bookID__bookID }}</td>
+            <td>{{ x.username__username }}</td>
+            <td>{{ x.username__email }}</td>
+            <td>{{ x.issuedate }}</td>
+            <td>{{ x.returndate }}</td>
+            
+        </tr>
+        {% endfor %}
+    </table>
+    <a style="color:black" href="/">Back</a>
+    
+</div>
+</body>
+</html>
+
